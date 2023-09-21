@@ -1,0 +1,119 @@
+/* ------------------see-product-details----------------------- */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(50px);
+  z-index: 999;
+}
+
+.modal.open{
+    display: block;
+}
+
+.see-product-container {
+  background-color: #ffffff;
+  max-width: 900px;
+  height: 500px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 28px, rgba(0, 0, 0, 0.22) 0px 5px 10px;
+}
+
+.see-product-container .close-icon-div {
+  position: absolute;
+  top: 10px;
+  right: 8px;
+}
+
+.see-product-container .close-icon-div li {
+  list-style: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #000000;
+}
+
+.see-image-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+} 
+
+.see-img-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.see-img-content p {
+  color: #9a9a9a;
+  font-size: 18px;
+  font-weight: 500;
+}
+.see-img-content p:first-child {
+  text-transform: uppercase;
+}
+
+.see-img-content h3 {
+  font-size: 30px;
+  text-transform: capitalize;
+}
+
+.see-img-content h4 {
+  font-size: 27px;
+  font-weight: 600;
+}
+
+.see-img-content button {
+  width: 150px;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  padding: 12px 15px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.see-img-content button:hover {
+  background-color: #0a66c2;
+  /* transform: scale(0.9); */
+}
+
+
+
+@media (max-width: 479px) {
+
+  .see-product-container{
+    padding-block: 50px;
+    flex-direction: column;
+    max-width: 90vw;
+    height: 80vh;
+    top: 48%
+  }
+
+  .see-product-container .see-img-content{
+    text-align: center;
+  }
+  .see-product-container .see-img-content button{
+    width: 100%;
+  }
+  .see-product-container .see-img-content h3{
+  font-size: 28px;
+
+  }
+}

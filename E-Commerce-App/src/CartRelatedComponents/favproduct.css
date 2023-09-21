@@ -1,0 +1,218 @@
+.wishlist-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty-wishlish {
+  width: 510px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 5% 4%;
+}
+
+.empty-wishlish h2 {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 20px;
+  color: #282c3f;
+}
+
+.empty-wishlish img {
+  width: 300px;
+}
+
+.empty-wishlish p {
+  color: #94989f;
+  font-size: 16px;
+}
+
+.empty-wishlish button {
+  background: none;
+  padding: 13px 40px;
+  color: #3466e8;
+  font-size: 17px;
+  font-weight: 600;
+  border: 1px solid #3466e8;
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.empty-wishlish button:hover {
+  transform: scale(0.9);
+}
+
+.favorite-product {
+  max-width: 100%;
+  margin-block: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 40px;
+  column-gap: 40px;
+}
+
+.fav-card {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid #d4d5d9;
+  border-radius: 5px;
+  padding: 10px 10px 30px 10px;
+  cursor: pointer;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 28px, rgba(0, 0, 0, 0.22) 0px 5px 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.fav-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fav-card .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #3466e8;
+  font-weight: 100;
+  font-size: 24px;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+.fav-card .close-btn:hover {
+  transform: scale(0.8);
+}
+
+.fav-card:hover .fav-data h4 {
+  color: #3466e8;
+}
+
+.fav-img img {
+  width: 250px;
+  /* height: 200px; */
+  border-bottom: 1px solid #7b91e9;
+}
+
+.fav-data h4 {
+  color: #282c3f;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 260px;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+/* .fav-data h4::after {
+  content: " ...";
+  position: absolute;
+  right: 0;
+  background-color: white;
+} */
+
+.fav-card .fav-data {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+
+.fav-card .fav-data h3 {
+  font-size: 17px;
+  color: #282c3f;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.fav-card .fav-data button {
+  cursor: pointer;
+  background: none;
+  color: #3466e8;
+  font-size: 17px;
+  font-weight: 600;
+  border: 1px solid #3466e8;
+  padding: 10px 18px;
+  border-radius: 3px;
+  transition: 0.5s;
+}
+
+.fav-card .fav-data button:hover {
+  background-color: #3466e8;
+  color: #ffff;
+  transform: scale(0.9);
+}
+
+/* _____________media_query_for_tablet_________________ */
+@media (max-width: 991px) {
+  .favorite-product {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .favorite-product .fav-card {
+    max-width: 260px;
+    max-height: 390px;
+  }
+  .fav-img img {
+    max-width: 220px;
+  }
+  .fav-data h4 {
+    max-width: 220px;
+  }
+}
+
+/* _____________mediaQueryForMaxWidth 767x________________ */
+@media (max-width: 767px) {
+  .favorite-product {
+    place-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 50px;
+    column-gap: 40px;
+  }
+}
+
+/* ___________media_query_for_Max_width_479px_____________ */
+
+@media (max-width: 479px) {
+  .empty-wishlish {
+    width: 80%;
+    gap: 15px;
+    margin-inline: auto;
+    padding-bottom: unset;
+  }
+  .favorite-product {
+    max-width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .favorite-product .fav-card {
+    width: 210px;
+    gap: 5px;
+    max-height: 310px;
+    padding-bottom: 30px;
+  }
+  .favorite-product .fav-card .fav-img img {
+    max-width: 135px;
+    max-height: 120px;
+  }
+  .fav-card .fav-data h4{
+   width: 200px;
+   padding-left: 5px;
+  }
+  .fav-card .fav-data button {
+    background-color: #3466e8;
+    color: #ffff;
+    width: 65%;
+    align-self: center;
+    font-size: 14px;
+  }
+}
